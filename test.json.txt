@@ -1,0 +1,1 @@
+﻿{"idmagic":"9","magic_name":"I","magic_cost":"30","cost":"30","magic_comments":"\u6307\u5b9a\u5175\u79cdPw+1","idcategory_magic":"11","category_name":"\u589e\u5f3a\u578b\u8f85\u52a9\u9b54\u6cd5"}

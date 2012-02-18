@@ -1,0 +1,50 @@
+.menuitem {
+    cursor: pointer;
+    float: left;
+    padding: 2px 5px 2px 5px;
+
+}
+.menubardiv {
+    display: block;
+    clear: both;
+}
+.maindiv {
+    display: block;
+    clear: both;
+    padding: 2px 5px 2px 5px;
+}
+.notifydiv {
+    display: block;
+    clear: both;
+    padding: 2px 5px 2px 5px;
+}
+.menuitemon {
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+/*
+    background: #DDDDDD; // fallback for older/unsupporting browsers
+    background: -moz-linear-gradient(top, #EEEEEE, #CCCCCC);  
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#EEEEEE), to(#CCCCCC));*/
+}
+.menudiv {
+    position: absolute;
+    clear: both;
+    padding: 2px 5px 2px 5px;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #888888;
+    opacity: .85;
+    background-color: #EEEEEE;
+}
+.menudivoff {
+    display: none;
+}
+.menudivon {
+    display: inline;
+}
