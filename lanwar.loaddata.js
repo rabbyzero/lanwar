@@ -10,7 +10,7 @@ function loaddata() {
 }
 
 function tryload(loadcontent) {
-    //var ajaxurl = "/getdata/" + loadcontent;
+    var ajaxurl = "/getdata/" + loadcontent;
     //ajaxurl ="file:///E:/node.js/lanwar/test.json";
     switch (loadcontent) {
         case "playerlist":
@@ -28,26 +28,26 @@ function tryload(loadcontent) {
     $.getJSON(ajaxurl,function(data){
         switch (loadcontent) {
             case "playerlist":
-                playerlist = data;
+                playerlist = $.parseJSON(data);
                 liststatus.player = "listready";
                 $(lanwarevent).trigger("playerloaded");
                 break;
             case "unitlist":
-                unitlist = data;
+                unitlist = $.parseJSON(data);
                 liststatus.unit = "listready";
                 $(lanwarevent).trigger("unitloaded");
                 break;
             case "magiclist":
-                magiclist = data;
+                magiclist = $.parseJSON(data);
                 liststatus.magic = "listready";
                 $(lanwarevent).trigger("magicloaded");
                 break;
             case "skilllist":
-                skillist = data;
+                skillist = $.parseJSON(data);
                 liststatus.skill = "listready";
                 break;
             case "itemlist":
-                itemlist = data;
+                itemlist = $.parseJSON(data);
                 liststatus.item = "listready";
                 break;
         }

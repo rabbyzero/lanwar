@@ -25,9 +25,12 @@ exports.loaderplayer = function (response) {
     
     var processresult = function (results, fields) {
         for (var i in results) {
-            playerlist.push({idplayer: results[i].idplayer, player_name: results[i].playername, level: results[i].lv, exp: results[i].exp, maxexp: results[i].maxexp, class_id: results[i].class_id, class_name: results[i].leadercategory_name,
+            playerlist.push({idplayer: results[i].idplayer, player_name: results[i].player_name, level: results[i].lv, exp: results[i].exp, maxexp: results[i].maxexp, class_id: results[i].class_id, class_name: results[i].leadercategory_name,
                             bell: {shrine: results[i].shrine, empire: results[i].empire, demon: results[i].demon, barbarian: results[i].barbarian},
-                            round: results[i].shrine + results[i].empire + results[i].demon + results[i].barbarian});
+                            round: results[i].shrine + results[i].empire + results[i].demon + results[i].barbarian,
+                            active: results[i].active,
+                            league_id: results[i].idleague,
+                            league_name: results[i].league_name});
         }
         response.json(playerlist);
     };

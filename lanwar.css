@@ -39,12 +39,161 @@
     border-style: dashed;
     border-width: 1px;
     border-color: #888888;
-    opacity: .85;
-    background-color: #EEEEEE;
+    opacity: .95;
+    background-color: #F2F5F7;
 }
 .menudivoff {
     display: none;
 }
 .menudivon {
     display: inline;
+}
+.menutitlebar {
+    clear: both;
+    display: block;
+    padding: 2px 5px 10px 5px;
+    border-bottom: solid;
+    border-bottom-color: #eeeeee;
+    height: 24px
+}
+.menutitlebuttonleft {
+    float: left;
+    padding: 2px 5px 2px 5px;
+}
+.menutitlebuttonright {
+    float: right;
+    padding: 2px 5px 2px 5px;
+}
+.playerselectdiv {
+    clear: both;
+    float: left;
+    padding: 5px 5px 5px 5px;
+}
+.playerselectbtn {
+    clear: both;
+    display: block;
+    padding: 2px 2px 2px 2px;
+    font-weight: bold;
+    height: 20px;
+    /*background-color: #ffffff;*/
+}
+.playerdetaildiv {
+    float: left;
+    padding: 5px 5px 5px 5px;
+}
+.playerdetail {
+    clear: both;
+    display: block;
+    height: 20px;
+    padding: 2px 2px 2px 2px;
+}
+.customplayer {
+    clear: both;
+    display: block;
+    padding: 10px 5px 2px 5px;
+    border-top: solid;
+    border-top-color: #eeeeee;
+}
+.customplayerbtn{
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.bell {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+.lv {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+.leaderclass {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+.expname {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+.exp {
+    display: inline-block;
+    position: relative;
+    padding-left: 1px;
+    padding-right: 1px;
+    text-align: center;
+    width: 80px;
+}
+
+.expgraph {
+    display: inline-block;
+    position: absolute;
+    //border: none;
+    z-index: -1;
+    height: 6px;
+    top: 6px;
+    left: 0;
+}
+.expback {
+    display: inline-block;
+    position: absolute;
+    //border: none;
+    z-index: -2;
+    height: 6px;
+    top: 6px;
+    right: 0;
+}
+.expvalue {
+    position: absolute;
+    clear: both;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+.shrine {
+    color: #0000ff;
+}
+.empire {
+    color: #2e8b57; /*seagreen*/
+}
+.demon {
+    color: #ff0000;
+}
+.bararian {
+    color: #a0522d; /*/sienna*/
+}
+.se {
+    color: #48d1cc; /*/mediumturquoise*/
+}
+.sd {
+    color: #9932cc; /*/darkorchid*/
+}
+.sb {
+    color: #00bfff; /*deepskyblue*/
+}
+.ed {
+    color: #ff8c00; /*darkorange*/
+}
+.eb {
+    color: #9acd32; /*yellowgreen*/
+}
+.db {
+    color: #ff85ff; /*magenta*/
+}
+.sed {
+    color: #000000; /*black*/
+}
+.seb {
+    color: #99ccff; 
+}
+.sdb {
+    color: #ccff99;
+}
+.edb {
+    color: #ff99cc; 
+}
+.sedb {
+    color: #ffcc00;
+}
+.bellinactive {
+    color: #bbbbbb;
 }

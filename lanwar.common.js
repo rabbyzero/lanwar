@@ -4,6 +4,79 @@ var magiclist;
 var skilllist;
 var itemlist;
 var liststatus = {player: "empty", unit: "empty", magic: "empty", skill: "empty", item: "empty"};
+var settings = {
+    my: {
+        active: true,
+        inactive: false,
+        advanced: true,
+        beginner: true,
+        candidate: false,
+        detail: true
+    },
+    op: {
+        active: true,
+        inactive: false,
+        advanced: true,
+        beginner: true,
+        candidate: false,
+        detail: true
+    },
+    adv: {
+        
+    }
+};
+var customplayer = {
+    my: {
+        idplayer: -1,
+        player_name: "自定义选手",
+        level: 4,
+        exp: 0,
+        maxexp: 80,
+        class_id: 10,
+        class_name: "术师",
+        bell: {shrine: true,empire: true,demon: true,barbarian: true},
+        round: 4,
+        active: 1,
+        league_id: 1,
+        league_name: "Advanced League"
+    },
+    op: {
+        idplayer: -2,
+        player_name: "自定义选手",
+        level: 4,
+        exp: 0,
+        maxexp: 80,
+        class_id: 10,
+        class_name: "术师",
+        bell: {shrine: true,empire: true,demon: true,barbarian: true},
+        round: 4,
+        active: 1,
+        league_id: 1,
+        league_name: "Advanced League"
+    }
+};
+var formation = {
+    my: {
+        player: {
+            idplayer: 0,
+            player_name: "未选定"
+        },
+        unit: [{idarmy: 0},{idarmy: 0},{idarmy: 0},{idarmy: 0},{idarmy: 0},{idarmy: 0},{idarmy: 0}],
+        magic: [],
+        skill: [],
+        item: []
+    },
+    op: {
+        player: {
+            idplayer: 0,
+            player_name: "未选定"
+        },
+        unit: [{idarmy: 0},{idarmy: 0},{idarmy: 0},{idarmy: 0},{idarmy: 0},{idarmy: 0},{idarmy: 0}],
+        magic: [],
+        skill: [],
+        item: []
+    }
+};
 
 $(document).ready(function(){
     //alert("test");
