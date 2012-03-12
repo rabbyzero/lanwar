@@ -41,6 +41,8 @@
     border-color: #888888;
     opacity: .95;
     background-color: #F2F5F7;
+    border-radius: 10px;
+    z-index: 5;
 }
 .menudivoff {
     display: none;
@@ -59,10 +61,15 @@
 .menutitlebuttonleft {
     float: left;
     padding: 2px 5px 2px 5px;
+    cursor: pointer;
 }
 .menutitlebuttonright {
     float: right;
     padding: 2px 5px 2px 5px;
+    cursor: pointer;
+}
+.btninactive {
+    color: #cccccc;
 }
 .playerselectdiv {
     clear: both;
@@ -75,6 +82,8 @@
     padding: 2px 2px 2px 2px;
     font-weight: bold;
     height: 20px;
+    text-align: right;
+    cursor: pointer;
     /*background-color: #ffffff;*/
 }
 .playerdetaildiv {
@@ -118,6 +127,7 @@
 .exp {
     display: inline-block;
     position: relative;
+    z-index: 10;
     padding-left: 1px;
     padding-right: 1px;
     text-align: center;
@@ -127,7 +137,6 @@
 .expgraph {
     display: inline-block;
     position: absolute;
-    //border: none;
     z-index: -1;
     height: 6px;
     top: 6px;
@@ -136,7 +145,6 @@
 .expback {
     display: inline-block;
     position: absolute;
-    //border: none;
     z-index: -2;
     height: 6px;
     top: 6px;
@@ -158,7 +166,19 @@
 .demon {
     color: #ff0000;
 }
-.bararian {
+.barbarian {
+    color: #a0522d; /*/sienna*/
+}
+.s {
+    color: #0000ff;
+}
+.e {
+    color: #2e8b57; /*seagreen*/
+}
+.d {
+    color: #ff0000;
+}
+.b {
     color: #a0522d; /*/sienna*/
 }
 .se {
@@ -196,4 +216,311 @@
 }
 .bellinactive {
     color: #bbbbbb;
+}
+.hidden {
+    display: none !important;
+}
+.floatleft {
+    float: left;
+    clear: none;
+    padding: 5px;
+}
+.playerbtnover {
+    text-decoration: underline;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+.playerbtnon {
+    border-style: dotted;
+    border-width: 1px;
+    border-color: #222222;
+    height: 18px;
+}
+.custombtn {
+    cursor: pointer;
+}
+.popmenu {
+    position: absolute;
+    clear: both;
+    padding: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #888888;
+    opacity: .95;
+    background-color: #cccccc;
+    border-radius: 2px;
+    display: none;
+    
+}
+.popmenuon {
+    display: block !important;
+    z-index: 20;
+    border-radius: 4px;
+}
+.lvselbtn {
+    padding: 2px 4px 2px 4px;
+    cursor: pointer;
+    height: 20px;
+    float: left;
+}
+.classselbtn {
+    padding: 2px 2px 2px 2px;
+    cursor: pointer;
+    height: 20px;
+    float: left;
+}
+.popmenuclosebtn {
+    display: inline-block !important;
+    float: right;
+}
+
+.maindiv {
+    display: block;
+    position: relative;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.leftbar {
+    float: left;
+    width: 30px;
+    padding: 0px 0px 5px 5px;
+}
+.leftbaritem {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 0px 10px 2px;
+    border: 1px solid;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    cursor: pointer;
+}
+.formationdiv {
+    float: left;
+    width: 450px;
+}
+.armylist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.armyitem {
+    margin: 1px 1px 1px 1px;
+    padding: 1px;
+    float: left;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+}
+.formationitem {
+    clear: both;
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.contentdiv {
+    float: left;
+    width: 420px;
+}
+.contentitem {
+    display: block;
+    clear: both;
+}
+.armyul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.armyli {
+    margin: 1px 1px 1px 1px;
+    padding: 0;
+    float: left;
+    width: 45px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+.shrinebg {
+    background-color: #8888ff;
+}
+.empirebg {
+    background-color: #9ecba7;
+}
+.demonbg {
+    background-color: #ff8888;
+}
+.barbarianbg {
+    background-color: #c0a29d;
+}
+.armydiv {
+    position: relative;
+}
+.armyimgdiv {
+    position: absolute;
+    display: block;
+}
+.armyimg {
+    display: block;
+}
+.proinfo {
+    position: absolute;
+    display: block;
+    left: 1px;
+    top: 0;
+    font-size: 12px;
+}
+.spinfo {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+}
+.lvinfo {
+    position: absolute;
+    display: block;
+    left: 1px;
+    bottom: -40px;
+    font-size: 12px;
+}
+.pwinfo {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: -40px;
+    font-size: 12px;
+}
+.magicul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.magicli {
+    margin: 1px 1px 1px 1px;
+    padding: 0;
+    float: left;
+    width: 35px;
+    height: 30px;
+    text-align: center;
+    font-size: 22px;
+    position: relative;
+    display: block;
+    border: 1px solid #888;
+    border-radius: 4px;
+}
+.magslv {
+    position: absolute;
+    display: block;
+    left: 1px;
+    top: 0;
+    font-size: 11px;
+}
+.magelv {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    font-size: 11px;
+}
+.magdlv {
+    position: absolute;
+    display: block;
+    left: 1px;
+    bottom: 0;
+    font-size: 11px;
+}
+.magblv {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+    font-size: 11px;
+}
+.armycategory {
+    clear: both;
+    display: block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.magiccategory {
+    clear: both;
+    display: block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.skillcategory {
+    clear: both;
+    display: block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.skillul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.skillli {
+    margin: 1px 1px 1px 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    display: block;
+    border: 1px solid #888;
+    border-radius: 4px;
+    cursor: default;
+}
+.skillcate {
+    position: absolute;
+    display: block;
+    left: 1px;
+    top: 0;
+    font-size: 11px;
+}
+.type4 {
+    background-color: #eee;
+}
+.hand {
+    cursor: pointer !important;
+}
+.basicinfoname{
+    clear: both;
+    display: block;
+    padding: 2px 2px 2px 2px;
+    font-weight: bold;
+    height: 20px;
+}
+.leftbaritemactive {
+    font-weight: bold;
+}
+.contentaccording {
+    clear: both;
+    display: block;
+    padding-left: 20px !important;
+    position: relative;
+}
+.contentaccordingicon {
+    position: absolute;
+    left: 0;
+}
+.basicexp {
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    padding-left: 1px;
+    padding-right: 1px;
+    text-align: center;
+    width: 80px;
 }
