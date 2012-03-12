@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Page Title</title>
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        var liststatus = {player: "empty", unit: "empty", magic: "empty", skill: "empty", item: "empty"};        
+        $(document).ready(loaddata);
+        function loaddata() {
+            tryload("playerlist");
+            tryload("unitlist");
+            tryload("magiclist");
+            //tryload("skilllist");
+            //tryload("itemlist");
+        }
+        function tryload(loadcontent) {
+            //var ajaxurl = "/getdata/" + loadcontent;
+            var ajaxurl = "/getdata/" + "playerlist";
+            //ajaxurl ="file:///E:/node.js/lanwar/test.json";
+            switch (loadcontent) {
+                case "playerlist":
+                    //$(lanwarevent).trigger("playerloaded");
+                    liststatus.player = "loading";break;
+                case "unitlist":
+                    liststatus.unit = "loading";break;
+                case "magiclist":
+                    liststatus.magic = "loading";break;
+                case "skilllist":
+                    liststatus.skill = "loading";break;
+                case "itemlist":
+                    liststatus.item = "loading";break;
+            }
+            $.getJSON(ajaxurl,function(data){
+                switch (loadcontent) {
+                    case "playerlist":
+                        //playerlist = data;
+                        liststatus.player = "listready";
+                        //$(lanwarevent).trigger("playerloaded");
+                        break;
+                    case "unitlist":
+                        //unitlist = data;
+                        liststatus.unit = "listready";
+                        //$(lanwarevent).trigger("unitloaded");
+                        break;
+                    case "magiclist":
+                        //magiclist = data;
+                        liststatus.magic = "listready";
+                        //$(lanwarevent).trigger("magicloaded");
+                        break;
+                    case "skilllist":
+                        //skillist = data;
+                        liststatus.skill = "listready";
+                        break;
+                    case "itemlist":
+                        //itemlist = data;
+                        liststatus.item = "listready";
+                        break;
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+</html>

@@ -70,11 +70,3 @@ function singlemagicli (who, magic) {
     
     return html;
 }
-
-function refreshmagicbtn (who) {
-    var newhtml = '<ul class="magiclist" id="mymagicul">';
-    newhtml += '<li class="ui-state-default magicitem">+</li>';
-    newhtml += '</ul>';
-    $("#"+who+"magic").empty().append(newhtml);
-    $("#"+who+"magicul").droppable(magicdrop);
-}

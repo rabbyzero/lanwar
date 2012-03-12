@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<html>
+<head>
+  <title>lanwar</title>
+  <meta charset="utf-8">
+  <link href="lanwar.css" rel="stylesheet" type="text/css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/cupertino/jquery-ui.css" rel="stylesheet" type="text/css">
+  <script src="lanwar.common.js" type="text/javascript"></script>
+  <script src="lanwar.loaddata.js" type="text/javascript"></script>
+  <script src="lanwar.menu.js" type="text/javascript"></script>
+  <script src="lanwar.event.js" type="text/javascript"></script>
+  <script src="lanwar.player.js" type="text/javascript"></script>
+  <script src="lanwar.rule.js" type="text/javascript"></script>
+  <script src="lanwar.sort.js" type="text/javascript"></script>
+  <script src="lanwar.unit.js" type="text/javascript"></script>
+  <script src="lanwar.magic.js" type="text/javascript"></script>
+  <script src="lanwar.skill.js" type="text/javascript"></script>
+  <script src="lanwar.basic.js" type="text/javascript"></script>
+  <script src="lanwar.maindiv.js" type="text/javascript"></script>
+<<<<<<< HEAD
+=======
+  <script src="lanwar.drop.js" type="text/javascript"></script>
+>>>>>>> 8eadd0109e6c8642aa374ea566158eed0bf25c14
+  
+</head>
+
+<body>
+
+<div class="menubardiv" id="menubar">
+    <div class="menuitem" id="menumy">本方设定</div> 
+    <div class="menuitem" id="menuop">对方设定</div>
+    <div class="menuitem" id="menuadv">高级设定</div>
+    <div class="menudiv menudivoff" id="menumydiv">
+      <div class="menutitlebar">
+        <div class="menutitlebuttonleft" id="myactive">活跃</div>
+        <div class="menutitlebuttonleft btninactive" id="myinactive">非活跃</div>
+        <div class="menutitlebuttonleft" id="myadv">Advanced</div>
+        <div class="menutitlebuttonleft" id="mybeg">Beginner</div>
+        <div class="menutitlebuttonleft btninactive" id="mycan">Candidates</div>
+        <div class="menutitlebuttonleft" id="mydet">详情</div>
+        <div class="menutitlebuttonright" id="myclose"><span class="ui-state-default ui-corner-all ui-icon ui-icon-carat-1-n"></span></div>
+      </div>
+      <div class="preloaded">
+        <div class="playerselectdiv" id="myseldiv">
+        </div>
+        <div class="playerdetaildiv" id="mydetdiv">
+        </div>
+      </div>
+      <div class="customplayer">
+        <div class="playerselectdiv" id="mycusdiv">
+          <div class="playerselectbtn sedb custombtn" id="mycusname">自定义选手</div>
+        </div>
+        <div class="playerdetaildiv">
+          <div class="playerdetail">
+            <span class="bell shrine custombtn" id="mycusshrine">光辉</span>
+            <span class="bell empire custombtn" id="mycusempire">帝国</span>
+            <span class="bell demon custombtn" id="mycusdemon">魔族</span>
+            <span class="bell barbarian custombtn" id="mycusbarbarian">蛮族</span>
+            <span class="lv custombtn" id="mycuslv">Lv.4</span>
+            <span class="leaderclass custombtn" id="mycusclass">术士</span>
+            <span class="customplayerbtn ui-widget-content custombtn" id="mycustom">自定义</span>
+            <span class="customplayerbtn ui-widget-content custombtn" id="mycustomsave">选定</span>
+          </div>
+          <div class="popmenu" id="mycuslvdiv">
+            <span class="lvselbtn" id="mylv1">Lv.1</span>
+            <span class="lvselbtn" id="mylv2">Lv.2</span>
+            <span class="lvselbtn" id="mylv3">Lv.3</span>
+            <span class="lvselbtn" id="mylv4">Lv.4</span>
+            <span class="popmenuclosebtn ui-state-default ui-corner-all ui-icon ui-icon-close" id="mylvclose"></span>
+          </div>
+          <div class="popmenu" id="mycusclassdiv">
+            <div>
+                <span class="classselbtn" id="myclass1">步兵</span>
+                <span class="classselbtn" id="myclass2">枪兵</span>
+                <span class="classselbtn" id="myclass3">骑兵</span>
+                <span class="classselbtn" id="myclass4">飞兵</span>
+                <span class="classselbtn" id="myclass5">水兵</span>
+                <span class="classselbtn" id="myclass6">弓兵</span>
+            </div>
+            <div>
+                <span class="classselbtn shrine" id="myclass7">神圣</span>
+                <span class="classselbtn demon" id="myclass8">黑暗</span>
+                <span class="classselbtn empire" id="myclass9">巫师</span>
+                <span class="classselbtn barbarian" id="myclass10">术师</span>
+                <span class="classselbtn" id="myclass11">召唤</span>
+                <span class="classselbtn" id="myclass12">魔导</span>
+            </div>
+            <div>
+                <span class="popmenuclosebtn ui-state-default ui-corner-all ui-icon ui-icon-close" id="myclassclose"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menudiv menudivoff" id="menuopdiv">
+      <div class="menutitlebar">
+        <div class="menutitlebuttonleft" id="opactive">活跃</div>
+        <div class="menutitlebuttonleft btninactive" id="opinactive">非活跃</div>
+        <div class="menutitlebuttonleft" id="opadv">Advanced</div>
+        <div class="menutitlebuttonleft" id="opbeg">Beginner</div>
+        <div class="menutitlebuttonleft btninactive" id="opcan">Candidates</div>
+        <div class="menutitlebuttonleft" id="opdet">详情</div>
+        <div class="menutitlebuttonright" id="opclose"><span class="ui-state-default ui-corner-all ui-icon ui-icon-carat-1-n"></span></div>
+      </div>
+      <div class="preloaded">
+        <div class="playerselectdiv" id="opseldiv">
+        </div>
+        <div class="playerdetaildiv" id="opdetdiv">
+        </div>
+      </div>
+      <div class="customplayer">
+        <div class="playerselectdiv" id="opcusdiv">
+          <div class="playerselectbtn sedb custombtn" id="opcusname">自定义选手</div>
+        </div>
+        <div class="playerdetaildiv">
+          <div class="playerdetail">
+            <span class="bell shrine custombtn" id="opcusshrine">光辉</span>
+            <span class="bell empire custombtn" id="opcusempire">帝国</span>
+            <span class="bell demon custombtn" id="opcusdemon">魔族</span>
+            <span class="bell barbarian custombtn" id="opcusbarbarian">蛮族</span>
+            <span class="lv custombtn" id="opcuslv">Lv.4</span>
+            <span class="leaderclass custombtn" id="opcusclass">术士</span>
+            <span class="customplayerbtn ui-widget-content custombtn" id="opcustom">自定义</span>
+            <span class="customplayerbtn ui-widget-content custombtn" id="opcustomsave">选定</span>
+          </div>
+          <div class="popmenu" id="opcuslvdiv">
+            <span class="lvselbtn" id="oplv1">Lv.1</span><span class="lvselbtn" id="oplv2">Lv.2</span>
+            <span class="lvselbtn" id="oplv3">Lv.3</span><span class="lvselbtn" id="oplv4">Lv.4</span>
+            <span class="popmenuclosebtn ui-state-default ui-corner-all ui-icon ui-icon-close" id="oplvclose"></span>
+          </div>
+          <div class="popmenu" id="opcusclassdiv">
+            <div>
+                <span class="classselbtn" id="opclass1">步兵</span>
+                <span class="classselbtn" id="opclass2">枪兵</span>
+                <span class="classselbtn" id="opclass3">骑兵</span>
+                <span class="classselbtn" id="opclass4">飞兵</span>
+                <span class="classselbtn" id="opclass5">水兵</span>
+                <span class="classselbtn" id="opclass6">弓兵</span>
+            </div>
+            <div>
+                <span class="classselbtn shrine" id="opclass7">神圣</span>
+                <span class="classselbtn demon" id="opclass8">黑暗</span>
+                <span class="classselbtn empire" id="opclass9">巫师</span>
+                <span class="classselbtn barbarian" id="opclass10">术师</span>
+                <span class="classselbtn" id="opclass11">召唤</span>
+                <span class="classselbtn" id="opclass12">魔导</span>
+            </div>
+            <div>
+                <span class="popmenuclosebtn ui-state-default ui-corner-all ui-icon ui-icon-close" id="opclassclose"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="maindiv ui-widget-content">
+    <div class="leftbar">
+        <div class="leftbaritem ui-state-active ui-widget-header ui-state-default" id="myleftbaritem">本<br>方</div>
+        <div class="leftbaritem ui-widget-header ui-state-default" id="opleftbaritem">对<br>方</div>
+    </div>
+    <div class="formationdiv ui-widget-content" id="myformationdiv">
+        <div class="formationitem formationitemactive" id="mybasicinfo">基本信息</div>
+<<<<<<< HEAD
+        <div class="formationitem" id="myskill">
+          <ul class="skillul" id="myskillul">
+            <li class="skillli" id="mys1a">步兵战斗力Pw+1</li>
+            <li class="skillli" id="mys0a">+</li>
+          </ul>
+        </div>
+        <div class="formationitem" id="mymagic">
+          <ul class="magicul">
+            <li class="magicli" id="mym1a">P-3</li>
+            <li class="magicli" id="mym0a">+</li>
+          </ul>
+        </div>
+=======
+        <div class="formationitem"  id="myskill"></div>
+        <div class="formationitem" id="mymagic"></div>
+>>>>>>> 8eadd0109e6c8642aa374ea566158eed0bf25c14
+        <div class="formationitem" id="myarmy">
+            armyhere:
+            <ul class="armylist" id="myarmyul">
+                <li class="ui-state-default armyitem">1</li>
+                <li class="ui-state-default armyitem">2</li>
+                <li class="ui-state-default armyitem">3</li>
+                <li class="ui-state-default armyitem">4</li>
+                <li class="ui-state-default armyitem">5</li>
+                <li class="ui-state-default armyitem">6</li>
+                <li class="ui-state-default armyitem">7</li>
+            </ul>
+        </div>
+        <div class="formationitem" id="myitem">
+            select item
+        </div>
+    </div>
+    <div class="formationdiv ui-widget-content hidden" id="opformationdiv">
+        <div class="formationitem formationitemactive" id="opbasicinfo"></div>
+        <div class="formationitem"  id="opskill"></div>
+        <div class="formationitem" id="opmagic"></div>
+        <div class="formationitem" id="oparmy">
+            <ul class="armylist" id="oparmyul">
+                <li class="ui-state-default armyitem">1</li>
+                <li class="ui-state-default armyitem">2</li>
+                <li class="ui-state-default armyitem">3</li>
+                <li class="ui-state-default armyitem">4</li>
+                <li class="ui-state-default armyitem">5</li>
+                <li class="ui-state-default armyitem">6</li>
+                <li class="ui-state-default armyitem">7</li>
+            </ul>
+        </div>
+        <div class="formationitem" id="opitem">
+        </div>
+    </div>
+    <div class="contentdiv ui-widget-content" id="mycontentdiv">
+        <div class="contentaccording ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" id="myskillaccording">
+            <span class="ui-icon contentaccordingicon ui-icon-triangle-1-s"></span>
+            技能
+        </div>
+        <div class="contentitem" id="myskillcon">
+            <div class="skillcategory" id="mysc1div">
+                <ul class="skillul" id="mysc1ul">
+                    <li class="skillli" id="mys1">
+                        步兵战斗力Pw+1
+                        <div class="skillcate">I</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="contentaccording ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" id="mymagicaccording">
+            <span class="ui-icon contentaccordingicon ui-icon-triangle-1-s"></span>
+            魔法
+        </div>
+        <div class="contentitem" id="mymagiccon">
+          <div class="magiccategory" id="mymc1div">
+            <ul class="magicul" id="mymc1ul">
+              <li class="magicli sdb" id="mym1">P
+                <div class="magslv shrine">
+                    L1
+                </div>
+                <div class="magelv empire">
+                    L2
+                </div>
+                <div class="magdlv demon">
+                    L3
+                </div>
+                <div class="magblv barbarian">
+                    L4
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contentaccording ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" id="myarmyaccording">
+            <span class="ui-icon contentaccordingicon ui-icon-triangle-1-s"></span>
+            指挥官及佣兵
+        </div>
+        <div class="contentitem" id="myarmycon">
+            <div class="armycategory" id="myinfantrydiv">
+                <ul class="armyul" id="myinfantryul">
+                    <li class="armyli" style="background: #eeeeee;" id="myu1">
+                        <div class="armydiv" style="position: relative;">
+                            <div class="armyimgdiv" style="position: absolute; display: block;" id="myu1div"><img class="armyimg" id="u1" alt="xxxx" src="img/1.gif"></div>
+                            <div class="proinfo" style="position: absolute; display: block; left: 0; top: 0; font-size: 12px;">圣召</div>
+                            <div class="spinfo" style="position: absolute; display: block; right: 0; top: 0; font-size: 12px;">免</div>
+                            <div class="lvinfo" style="position: absolute; display: block; left: 0; bottom: -40px; font-size: 12px;">L3</div>
+                            <div class="pwinfo" style="position: absolute; display: block; right: 0; bottom: -40px; font-size: 12px;">P1A</div>
+                        </div>
+                    </li>
+                    <li class="armyli" id="myu1">
+                        <div style="position: relative;"><div class="utemp" style="position: absolute" id="myu1div"><img src="img/1.gif"></div></div>
+                    </li>
+                    <li class="armyli" id="myu1">
+                        <div style="position: relative;"><div class="utemp" style="position: absolute" id="myu1div"><img src="img/1.gif"></div></div>
+                    </li>
+                    <li class="armyli" id="myu1">
+                        <div style="position: relative;"><div class="utemp" style="position: absolute" id="myu1div"><img src="img/1.gif"></div></div>
+                    </li>
+                    <li class="armyli" id="myu1">
+                        <div style="position: relative;"><div class="utemp" style="position: absolute" id="myu1div"><img src="img/1.gif"></div></div>
+                    </li>
+                    <li class="armyli" id="myu1"><div class="" ><img src="img/2.gif"></div></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                </ul>
+            </div>
+            <div class="armycategory" id="myspeardiv">
+                <ul class="armyul" id="myspearul">
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                    <li class="armyli" id="myu1"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contentaccording ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" id="myitemaccording">
+            <span class="ui-icon contentaccordingicon ui-icon-triangle-1-s"></span>
+            道具
+        </div>
+        <div class="contentitem" id="myitemcon"></div>
+    </div>
+    <div class="contentdiv ui-widget-content hidden" id="opcontentdiv">
+        <div class="contentaccording ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" id="opskillaccording">
+            <span class="ui-icon contentaccordingicon ui-icon-triangle-1-s"></span>
+            技能
+        </div>
+        <div class="contentitem" id="opskillcon"></div>
+        <div class="contentaccording ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" id="opmagicaccording">
+            <span class="ui-icon contentaccordingicon ui-icon-triangle-1-s"></span>
+            魔法
+        </div>
+        <div class="contentitem" id="opmagiccon"></div>
+        <div class="contentaccording ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" id="oparmyaccording">
+            <span class="ui-icon contentaccordingicon ui-icon-triangle-1-s"></span>
+            指挥官及佣兵
+        </div>
+        <div class="contentitem" id="oparmycon"></div>
+        <div class="contentaccording ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" id="opitemaccording">
+            <span class="ui-icon contentaccordingicon ui-icon-triangle-1-s"></span>道具
+        </div>
+        <div class="contentitem" id="opitemcon"></div>
+    </div>
+</div>
+<div class="notifydiv">
+    asdf
+</div>
+</body>
+</html>
+</html>
