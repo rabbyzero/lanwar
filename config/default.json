@@ -1,0 +1,10 @@
+{
+    "dbconfig": {
+        "host": "50.56.31.35",
+        "port": 3306,
+        "dbuser": "root",
+        "dbpasswd": "",
+        "database": "lanwar",
+        "dbcharset": "utf8"
+    }
+}
